@@ -59,7 +59,7 @@ function Hero() {
                             </Link>
                         </div>
                         <div className='rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300'>
-                            <Link href='https://drive.google.com/file/d/1-0RHMRiOhOuwgwwSt_BE_FlCg_9SA4rz/view?usp=drive_link'>
+                            <Link href='https://drive.google.com/file/d/1-I4yhQk8oioHpE1uLSyyaFtZUcXb8YLS/view?usp=drive_link'>
                                 <TbLetterR className='font-bold' />
                             </Link>
                         </div>
