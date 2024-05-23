@@ -2,11 +2,18 @@
 import React from 'react'
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa'
 import { TbLetterR } from "react-icons/tb";
-import { BsInstagram, BsTwitter } from 'react-icons/bs'
+import { BsInstagram } from 'react-icons/bs'
+import { FaXTwitter } from "react-icons/fa6";
 import { SiHashnode } from 'react-icons/si';
 import Link from 'next/link';
 import { TypeAnimation } from 'react-type-animation';
 function Hero() {
+    const resumeLink = process.env.NEXT_PUBLIC_RESUME_LINK || '';
+    const linkedInLink = process.env.NEXT_PUBLIC_LINKEDIN_LINK || '';
+    const githubLink = process.env.NEXT_PUBLIC_GITHUB_LINK || '';
+    const instagramLink = process.env.NEXT_PUBLIC_INSTAGRAM_LINK || '';
+    const twitterLink = process.env.NEXT_PUBLIC_TWITTER_LINK || '';
+    const hashnodeLink = process.env.NEXT_PUBLIC_HASHNODE_LINK || '';
     return (
         <div id='home' className='w-full h-screen text-center'>
             <div className='max-w-[1240px] w-full h-full mx-auto p-2 flex items-center justify-center'>
@@ -21,7 +28,7 @@ function Hero() {
                             sequence={[
                                 "Full Stack Developer",
                                 1000,
-                                "Web Developer",
+                                "Frontend Developer",
                                 1000,
                                 "Java Developer",
                                 1000,
@@ -38,28 +45,32 @@ function Hero() {
                     </p>
                     <div className='flex items-center justify-between max-w-[400px] m-auto py4'>
                         <div className='rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300'>
-                            <Link href='https://www.linkedin.com/in/tahmeer-pasha-b36267202/'>
+                            <Link href={linkedInLink}>
                                 <FaLinkedinIn />
-                            </Link>                        </div>
+                            </Link>
+                        </div>
                         <div className='rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300'>
-                            <Link href='https://github.com/Tahmeerpasha'>
+                            <Link href={githubLink}>
                                 <FaGithub />
-                            </Link>                        </div>
+                            </Link>
+                        </div>
                         <div className='rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300'>
-                            <Link href='https://www.instagram.com/'>
+                            <Link href={instagramLink}>
                                 <BsInstagram />
-                            </Link>                        </div>
+                            </Link>
+                        </div>
                         <div className='rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300'>
-                            <Link href='https://twitter.com/IamTahmeer'>
-                                <BsTwitter />
-                            </Link>                        </div>
+                            <Link href={twitterLink}>
+                                <FaXTwitter />
+                            </Link>
+                        </div>
                         <div className='rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300'>
-                            <Link href='https://tahmeerpasha.hashnode.dev/'>
+                            <Link href={hashnodeLink}>
                                 <SiHashnode />
                             </Link>
                         </div>
                         <div className='rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300'>
-                            <Link href='https://drive.google.com/file/d/1-I4yhQk8oioHpE1uLSyyaFtZUcXb8YLS/view?usp=drive_link'>
+                            <Link href={resumeLink}>
                                 <TbLetterR className='font-bold' />
                             </Link>
                         </div>

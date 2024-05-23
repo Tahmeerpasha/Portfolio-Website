@@ -6,8 +6,24 @@ import socialite from '../assets/projects/Socialite.jpg'
 import todolist from '../assets/projects/todolist.jpg'
 import youtube from '../assets/projects/youtube.jpg'
 import weartruth from '../assets/projects/weartruth.jpg'
+import socialSphere from '../assets/projects/social-sphere.jpg'
 
 const projects = [
+    {
+        title: 'Social Sphere - An AI assisted content creation and management Platform',
+        tech: ['NextJS', 'ReactJS', 'Redux Toolkit', 'TailwindCSS', 'ExpressJS', 'NodeJS', 'MongoDB', 'AWS'],
+        backgroundImg: socialSphere,
+        projectUrl: '/social-sphere',
+        overview: `Social Sphere is a comprehensive solution for all social media management needs, offering a suite of powerful features:
+
+        1. AI Content Generation: Generate creative ideas for content using the integrated AI assistant.
+        2. Idea Management: Save and organize content ideas for future reference.
+        3. Multi-Platform Connectivity: Connect and manage multiple social media platforms, including LinkedIn and YouTube.
+        4. Unified Content Creation and Posting: Create content and post it across various social media platforms from a single interface.
+        5. Analytics Dashboard: View detailed analytics and track content performance to refine social media strategies.`,
+        demoLink: 'https://social-sphere-frontend.vercel.app/',
+        codeLink: 'https://github.com/Tahmeerpasha/social-sphere',
+    },
     {
         title: 'WearTruth - An Ecommerce Platform',
         tech: ['NextJS', 'ReactJS', 'Redux Toolkit', 'TailwindCSS', 'Spring Boot', 'Hibernate', 'MySQL', 'AWS'],
