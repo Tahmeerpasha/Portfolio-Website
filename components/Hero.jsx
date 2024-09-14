@@ -41,7 +41,7 @@ function Hero() {
                         />
                     </h1>
                     <p className='py-4 text-gray-400 '>
-                        Passionate Full Stack Engineer | Transforming Ideas into Solutions | Embracing Innovation and Continuous Learning
+                        Software Developer | Transforming Ideas into Solutions | Building SAAS products @ Webknot Technologies
                     </p>
                     <div className='flex items-center justify-between max-w-[400px] m-auto py4'>
                         <div className='rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300'>

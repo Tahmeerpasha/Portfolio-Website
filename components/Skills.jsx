@@ -15,9 +15,11 @@ import springboot from '../public/assets/skills/spring-boot.png';
 import postman from '../public/assets/skills/postman.png';
 import hibernate from '../public/assets/skills/hibernate.png';
 import mySql from '../public/assets/skills/mysql.png';
+import postges from '../public/assets/skills/postgres.webp';
 import java from '../public/assets/skills/java.png';
 import express from '../public/assets/skills/express.webp';
 import node from '../public/assets/skills/nodejs.jpg';
+import nestjs from '../public/assets/skills/nestjs.png';
 import jwt from '../public/assets/skills/jwt.png';
 import mongo from '../public/assets/skills/mongo.png';
 import Cards from './helper/Cards';
@@ -34,18 +36,20 @@ function Skills() {
         { img: tailwind, text: "Tailwind CSS" },
         { img: express, text: "ExpressJS" },
         { img: node, text: "NodeJS" },
+        { img: nestjs, text: "NestJS" },
         { img: java, text: "Java" },
         { img: springboot, text: "Spring Boot" },
         { img: hibernate, text: "Hibernate" },
         { img: mySql, text: "MySQL" },
+        { img: postges, text: "Postgres" },
         { img: mongo, text: "MongoDB" },
         { img: github, text: "Github" },
         { img: firebase, text: "Firebase" },
         { img: aws, text: "AWS" },
         { img: postman, text: "Postman" },
         { img: jwt, text: "JWT" },
-        { img: rapidApi, text: "RapidAPI" },
-        { img: axios, text: "Axios" },
+        // { img: rapidApi, text: "RapidAPI" },
+        // { img: axios, text: "Axios" },
     ];
 
     const skillsToShow = showAll ? skills : skills.slice(0, 8);

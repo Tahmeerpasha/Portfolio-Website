@@ -8,9 +8,12 @@ const About = () => {
                 <div className='col-span-2'>
                     <p className='uppercase tracking-widest font-bold text-2xl text-[#5651e5]'>About Me</p>
                     <h2 className='py-4'>Who I am</h2>
-                    <p className='py-2 text-gray-600'>I am a Developer</p>
+                    <p className='py-2 text-gray-600'>I am a Software Developer</p>
                     <p className='py-2 text-justify pr-10  text-gray-900'>
-                        Hello! {'I\'m'} Tahmeer Pasha, a final-year Information Science and Engineering student with a fervor for crafting meaningful digital experiences. My tech journey spans a versatile skill set, encompassing Next.js, React.js, Java, Spring Boot, and more. {'I\'m'} not just a coder, {'I\'m'} a problem solver who thrives on challenges. Beyond the realm of coding, I am deeply passionate about startups, business strategies, and staying abreast of global news. Currently open to exciting opportunities, I bring valuable freelance experience to the table. {'Let\'s'} connect, collaborate, and explore the intersection of technology, business, and the ever-evolving global landscape!                    </p>
+                        Hello! {"I'm"} Tahmeer Pasha, a Full Stack Developer with a strong foundation in building impactful digital solutions. My expertise includes a diverse array of technologies such as JavaScript, React.js, Next.js, Nest.js, Java, and Spring Boot, enabling me to tackle complex challenges with innovative approaches.
+                        With hands-on experience leading projects for clients like Omron Healthcare and Mardia Engineering, I have successfully delivered results that enhance operational efficiency and drive business growth. Currently, I am working at Webknot Technologies, where I am passionate about building SaaS products that solve real-world problems. I continuously seek opportunities to expand my knowledge and skills.
+                        Open to exciting new challenges, I am eager to contribute my freelance experience and collaborative spirit to dynamic teams. {"Let's"} connect and explore how we can innovate together!
+                    </p>
                     {/* <pre>Summary:</pre>
                     <pre>Team Player | Smart Worker | Coding enthusiast.</pre>
                     <pre>Learning Web development and Data structures and algorithms.</pre>
