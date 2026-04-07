@@ -1,116 +1,174 @@
-import Image from 'next/image'
-import React from 'react'
-import contactImg from '../public/assets/images/contact.jpg'
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
-import { BsInstagram } from 'react-icons/bs'
-import { FaXTwitter } from "react-icons/fa6";
-import { SiHashnode } from 'react-icons/si'
-import { HiOutlineChevronDoubleUp } from 'react-icons/hi'
-import Link from 'next/link'
-import { TbLetterR } from 'react-icons/tb'
+import React from 'react';
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
+import { Mail, MapPin, ArrowUp } from 'lucide-react';
+import Link from 'next/link';
+import config from '../public/data/config';
 
 function Contact() {
-    const resumeLink = process.env.NEXT_PUBLIC_RESUME_LINK || '';
-    const linkedInLink = process.env.NEXT_PUBLIC_LINKEDIN_LINK || '';
-    const githubLink = process.env.NEXT_PUBLIC_GITHUB_LINK || '';
-    const instagramLink = process.env.NEXT_PUBLIC_INSTAGRAM_LINK || '';
-    const twitterLink = process.env.NEXT_PUBLIC_TWITTER_LINK || '';
-    const hashnodeLink = process.env.NEXT_PUBLIC_HASHNODE_LINK || '';
-    return (
-        <div id='contact' className='w-full lg:h-screen'>
-            <div className='max-w-[1240px] m-auto px-2 py-16 w-full'>
-                <p className=' tracking-widest uppercase font-bold text-2xl text-[#5651e5]'>Contact</p>
-                <h2 className='py-4'>Get In Touch</h2>
-                <div className='grid lg:grid-cols-5 gap-8'>
-                    {/* Left-section */}
-                    <div className='col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4'>
-                        <div className='lg:p-4 h-full'>
-                            <div>
-                                <Image className='rounded-xl hover:scale-105 ease-in duration-300' src={contactImg} alt="/" />
-                            </div>
-                            <div>
-                                <h2 className='py-2 text-[#5651e5]'>Tahmeer Pasha</h2>
-                                <p>Full Stack Developer</p>
-                                <p className='py-4'>{'I\'m'} open to exciting opportunities. Feel free to reach out, and {'let\'s'} have a conversation about the possibilities ahead!</p>
-                            </div>
-                            <div>
-                                <p className='pt-8 uppercase'>Connect With Me</p>
-                                <div className='flex items-center justify-between py-4'>
-                                    <div className='rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300'>
-                                        <Link href={linkedInLink}>
-                                            <FaLinkedinIn />
-                                        </Link>
-                                    </div>
-                                    <div className='rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300'>
-                                        <Link href={githubLink}>
-                                            <FaGithub />
-                                        </Link>
-                                    </div>
-                                    <div className='rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300'>
-                                        <Link href={instagramLink}>
-                                            <BsInstagram />
-                                        </Link>
-                                    </div>
-                                    <div className='rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300'>
-                                        <Link href={twitterLink}>
-                                            <FaXTwitter />
-                                        </Link>
-                                    </div>
-                                    <div className='rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300'>
-                                        <Link href={hashnodeLink}>
-                                            <SiHashnode />
-                                        </Link>
-                                    </div>
-                                    <div className='rounded-full shadow-lg shadow-gray-400 p-5 cursor-pointer hover:scale-110 ease-in duration-300'>
-                                        <Link href={resumeLink}>
-                                            <TbLetterR className='font-bold' />
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {/* Right-section */}
-                    <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4">
-                        <div className="p-4">
-                            <form action={'https://getform.io/f/1a7e5fe7-02a8-47fc-887d-168b72799f58'} method='POST'>
-                                <div className="grid md:grid-cols-2 gap-4 w-full py-2">
-                                    <div className="flex flex-col">
-                                        <label className="uppercase text-sm py-2">Name</label>
-                                        <input type="text" name='Name' className='border-2 rounded-lg p-3 flex' />
-                                    </div>
-                                    <div className="flex flex-col">
-                                        <label className="uppercase text-sm py-2">Phone Number</label>
-                                        <input type="text" name='Phone' className='border-2 rounded-lg p-3 flex' />
-                                    </div>
-                                </div>
-                                <div className='flex flex-col py-2'>
-                                    <label className="uppercase text-sm py-2">Email</label>
-                                    <input type="email" name='Email' className='border-2 rounded-lg p-3 flex' />
-                                </div>
-                                <div className='flex flex-col py-2'>
-                                    <label className="uppercase text-sm py-2">Subject</label>
-                                    <input type="text" name='Subject' className='border-2 rounded-lg p-3 flex' />
-                                </div>
-                                <div className='flex flex-col py-2'>
-                                    <label className="uppercase text-sm py-2">Message</label>
-                                    <textarea name='Message' className='border-2 rounded-lg p-3 border-gray-300' rows={10}></textarea>
-                                </div>
-                                <button className='w-full p-4 text-gray-100 mt-4'>Send Message</button>
-                            </form>
-                        </div>
-                    </div>
+  return (
+    <section id="contact" className="py-24" aria-label="Contact">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <p className="section-label mb-4">Contact</p>
+        <h2 className="text-heading mb-4">Let&apos;s talk</h2>
+        <p className="text-muted mb-12 max-w-xl leading-relaxed">
+          I&apos;m open to Backend / Full-Stack SDE roles at product-based
+          companies. If you&apos;d like to connect, feel free to reach out
+          through the form or directly via email.
+        </p>
+
+        <div className="grid lg:grid-cols-5 gap-8">
+          {/* Left — contact info */}
+          <div className="lg:col-span-2 space-y-6">
+            <div className="card space-y-5">
+              <div>
+                <p className="text-heading font-semibold text-base">
+                  {config.name}
+                </p>
+                <p className="text-accent text-sm mt-0.5">{config.title}</p>
+              </div>
+
+              <div className="space-y-3">
+                <a
+                  href={`mailto:${config.email}`}
+                  className="flex items-center gap-3 text-sm text-muted hover:text-accent transition-colors group"
+                  aria-label="Email"
+                >
+                  <Mail size={15} className="shrink-0 group-hover:text-accent" />
+                  {config.email}
+                </a>
+                <div className="flex items-center gap-3 text-sm text-muted">
+                  <MapPin size={15} className="shrink-0" />
+                  {config.location}
                 </div>
-                <div className='flex justify-center py-12'>
-                    <Link href='/'>
-                        <div className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300'>
-                            <HiOutlineChevronDoubleUp size={30} className='text-[#5651e5]' />
-                        </div>
-                    </Link>
+              </div>
+
+              <div className="pt-4 border-t border-border">
+                <p className="text-xs font-mono text-muted uppercase tracking-widest mb-3">
+                  Connect
+                </p>
+                <div className="flex gap-3">
+                  <a
+                    href={config.social.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                    className="w-9 h-9 rounded-lg border border-border flex items-center justify-center text-muted hover:text-accent hover:border-accent transition-colors"
+                  >
+                    <FaLinkedinIn size={15} />
+                  </a>
+                  <a
+                    href={config.social.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub"
+                    className="w-9 h-9 rounded-lg border border-border flex items-center justify-center text-muted hover:text-accent hover:border-accent transition-colors"
+                  >
+                    <FaGithub size={15} />
+                  </a>
                 </div>
+              </div>
             </div>
+          </div>
+
+          {/* Right — contact form */}
+          <div className="lg:col-span-3 card">
+            <form
+              action={config.contactFormAction}
+              method="POST"
+              className="space-y-5"
+            >
+              <div className="grid sm:grid-cols-2 gap-4">
+                <div className="flex flex-col gap-1.5">
+                  <label
+                    htmlFor="contact-name"
+                    className="text-xs font-mono text-muted uppercase tracking-widest"
+                  >
+                    Name
+                  </label>
+                  <input
+                    id="contact-name"
+                    type="text"
+                    name="Name"
+                    required
+                    className="bg-bg border border-border rounded-lg px-4 py-2.5 text-sm text-heading placeholder-border focus:outline-none focus:border-accent transition-colors"
+                    placeholder="Jane Smith"
+                  />
+                </div>
+                <div className="flex flex-col gap-1.5">
+                  <label
+                    htmlFor="contact-email"
+                    className="text-xs font-mono text-muted uppercase tracking-widest"
+                  >
+                    Email
+                  </label>
+                  <input
+                    id="contact-email"
+                    type="email"
+                    name="Email"
+                    required
+                    className="bg-bg border border-border rounded-lg px-4 py-2.5 text-sm text-heading placeholder-border focus:outline-none focus:border-accent transition-colors"
+                    placeholder="jane@company.com"
+                  />
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-1.5">
+                <label
+                  htmlFor="contact-subject"
+                  className="text-xs font-mono text-muted uppercase tracking-widest"
+                >
+                  Subject
+                </label>
+                <input
+                  id="contact-subject"
+                  type="text"
+                  name="Subject"
+                  required
+                  className="bg-bg border border-border rounded-lg px-4 py-2.5 text-sm text-heading placeholder-border focus:outline-none focus:border-accent transition-colors"
+                  placeholder="SDE opportunity at ..."
+                />
+              </div>
+
+              <div className="flex flex-col gap-1.5">
+                <label
+                  htmlFor="contact-message"
+                  className="text-xs font-mono text-muted uppercase tracking-widest"
+                >
+                  Message
+                </label>
+                <textarea
+                  id="contact-message"
+                  name="Message"
+                  rows={5}
+                  required
+                  className="bg-bg border border-border rounded-lg px-4 py-2.5 text-sm text-heading placeholder-border focus:outline-none focus:border-accent transition-colors resize-none"
+                  placeholder="Hi Tahmeer, I'd like to discuss..."
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="btn-primary w-full justify-center"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
         </div>
-    )
+
+        {/* Back to top */}
+        <div className="flex justify-center mt-16">
+          <Link
+            href="/#home"
+            aria-label="Scroll to top"
+            className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted hover:text-accent hover:border-accent transition-colors"
+          >
+            <ArrowUp size={16} />
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
 }
 
-export default Contact
+export default Contact;

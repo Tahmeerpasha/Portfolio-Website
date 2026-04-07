@@ -1,31 +1,97 @@
-import React from 'react'
-import Image from 'next/image'
-import profile from '../public/assets/images/Tahmeer4.jpg'
-const About = () => {
-    return (
-        <div id='about' className='md:h-screen w-full p-2 flex items-center py-16'>
-            <div className='max-w-[1240px] m-auto md:grid grid-cols-3 gap-8'>
-                <div className='col-span-2'>
-                    <p className='uppercase tracking-widest font-bold text-2xl text-[#5651e5]'>About Me</p>
-                    <h2 className='py-4'>Who I am</h2>
-                    <p className='py-2 text-gray-600'>I am a Software Developer</p>
-                    <p className='py-2 text-justify pr-10  text-gray-900'>
-                        Hello! {"I'm"} Tahmeer Pasha, a Full Stack Developer with a strong foundation in building impactful digital solutions. My expertise includes a diverse array of technologies such as JavaScript, React.js, Next.js, Nest.js, Java, and Spring Boot, enabling me to tackle complex challenges with innovative approaches.
-                        With hands-on experience leading projects for clients like Omron Healthcare and Mardia Engineering, I have successfully delivered results that enhance operational efficiency and drive business growth. Currently, I am working at Webknot Technologies, where I am passionate about building SaaS products that solve real-world problems. I continuously seek opportunities to expand my knowledge and skills.
-                        Open to exciting new challenges, I am eager to contribute my freelance experience and collaborative spirit to dynamic teams. {"Let's"} connect and explore how we can innovate together!
-                    </p>
-                    {/* <pre>Summary:</pre>
-                    <pre>Team Player | Smart Worker | Coding enthusiast.</pre>
-                    <pre>Learning Web development and Data structures and algorithms.</pre>
-                    <pre>Proficient in Java programming language.</pre> */}
-                    <a href='#projects' className='py-2 text-gray-600'>Checkout my latest projects!</a>
-                </div>
-                <div className='w-full rounded h-auto m-auto shadow-xl shadow-gray-400  flex items-center justify-center  hover:scale-105 ease-in duration-300'>
-                    <Image className='cursor-pointer rounded ' src={profile} alt='/' width={1980} height={480} />
-                </div>
-            </div>
-        </div>
-    )
-}
+import React from 'react';
 
-export default About
+const highlights = [
+  {
+    metric: '10k+',
+    label: 'events/day',
+    desc: 'Microservices with retry + idempotency',
+  },
+  {
+    metric: '1M+',
+    label: 'records per run',
+    desc: 'AWS Lambda + Step Functions pipelines',
+  },
+  {
+    metric: '30%',
+    label: 'latency reduction',
+    desc: 'Composite index optimisation on PostgreSQL',
+  },
+  {
+    metric: '15%',
+    label: 'infra cost saved',
+    desc: 'S3 lifecycle policies + DB audits',
+  },
+];
+
+const About = () => {
+  return (
+    <section id="about" className="py-24" aria-label="About">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <p className="section-label mb-4">About Me</p>
+        <h2 className="text-heading mb-8">
+          I build backend systems — not just UIs.
+        </h2>
+
+        <div className="grid md:grid-cols-2 gap-12 items-start">
+          {/* Bio */}
+          <div className="space-y-4 text-muted leading-relaxed">
+            <p>
+              I&apos;m{' '}
+              <span className="text-heading font-medium">Tahmeer Pasha</span>, a
+              Backend Software Engineer at{' '}
+              <span className="text-accent font-medium">
+                Webknot Technologies
+              </span>
+              , Bengaluru. I design and implement production-grade systems —
+              microservices, event-driven pipelines, and cloud-native
+              architectures.
+            </p>
+            <p>
+              My work spans Spring Boot microservices handling 10k+ events/day,
+              AWS Lambda pipelines processing over a million records per run, and
+              Elasticsearch search systems operating at sub-200ms latency — all
+              running in live production.
+            </p>
+            <p>
+              I&apos;m actively strengthening DSA and Low-Level Design skills,
+              targeting SDE roles at product-based companies.
+            </p>
+
+            {/* Education */}
+            <div className="mt-6 pt-6 border-t border-border">
+              <p className="text-xs font-mono text-muted uppercase tracking-widest mb-2">
+                Education
+              </p>
+              <p className="text-heading text-sm font-medium">
+                BE · Information Science & Engineering
+              </p>
+              <p className="text-muted text-sm">
+                HKBK College of Engineering, Bengaluru &mdash; CGPA 8.22
+              </p>
+              <p className="text-xs text-muted mt-0.5">Nov 2020 – May 2024</p>
+            </div>
+          </div>
+
+          {/* Impact cards */}
+          <div className="grid grid-cols-2 gap-4">
+            {highlights.map((h) => (
+              <div key={h.metric} className="card hover:border-accent/40 transition-colors duration-200">
+                <p className="text-2xl font-bold text-accent font-mono">
+                  {h.metric}
+                </p>
+                <p className="text-sm font-medium text-heading mt-1">
+                  {h.label}
+                </p>
+                <p className="text-xs text-muted mt-1 leading-relaxed">
+                  {h.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default About;
